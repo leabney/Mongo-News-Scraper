@@ -1,2 +1,2 @@
 # Mongo-News-Scraper
-## Test
+## Purpose
