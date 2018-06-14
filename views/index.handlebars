@@ -1,0 +1,21 @@
+
+<div class="container-fluid">
+  <div id="articles" class="card-columns">
+
+    {{#each articles}}
+    <div class="card" style="width:200px">
+      <img class="card-img-top" src="{{this.image}}" alt="Card image" height="116"/>
+      <div class="card-body">
+        <a href="https://www.huffingtonpost.com/{{this.link}}" target="_blank" class="card-link">
+          <h4 class="card-title">{{this.title}}</h4>
+        </a>
+        <button class="btn btn-block btn-warning my-2 my-sm-0 save" id="{{this._id}}" type="submit">Save</button>
+      </div>
+      </div>
+    {{/each}}
+
+    </div>
+    <div id="notes">
+    </div>
+  </div>
+  

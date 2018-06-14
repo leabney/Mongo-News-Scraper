@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Mongo NewsScraper</title>
+		<meta charset="UTF-8">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<!-- Optional theme -->
+		
+		<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+	</head>
+	<body>	
+<script type="text/x-handlebars-template" id="main-template"></script>		
+ <nav class="navbar navbar-expand-lg navbar-dark">
+  <a class="navbar-brand" href="">Mongo Scraper</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li id="homeNav" class="nav-item">
+        <a class="nav-link" href="index">Home
+        </a>
+      </li>
+      <li id="saveNav" class="nav-item">
+        <a class="nav-link" href="saved">Saved Articles</a>
+      </li>
+      <button class="btn btn-danger my-2 my-sm-0" data-toggle="modal" data-target="#scrapeModal" id="scrape" type="submit">Scrape New Articles</button>
+    </ul>
+
+  </div>
+</nav>
+
+<div class="modal" id="scrapeModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">HuffPost</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Articles scraped.
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal" id="modalClose">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="jumbotron jumbotron-fluid text-center">
+  <h1>Mongo Scraper</h1>
+  <h3>HuffPost Edition</h3>
+</div>
+<div id="mainBody">
+		{{{ body }}}
+</div>
+		<footer class="footer">
+    <div class="container center">
+      <div class="row justify-content-center">
+        <p id="delete">Remove All Articles</p>
+      </div>
+    </div>
+  </footer>
+
+</script>
+ 
+	 <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+    <script src="/assets/app.js"></script>
+	</body>
+</html>
