@@ -1,7 +1,7 @@
 var express = require("express");
 
 var router = express.Router();
-var db = require("../models/index");
+var db = require(path.join(__dirname, '../models/index'));
 
 // Our scraping tools
 // Axios is a promised-based http library, similar to jQuery's Ajax method
