@@ -1,4 +1,6 @@
 var express = require("express");
+var path = require("path");
+
 
 var router = express.Router();
 var db = require(path.join(__dirname, '../models/index'));
