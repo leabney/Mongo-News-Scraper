@@ -9,13 +9,38 @@
         <a href="https://www.huffingtonpost.com/{{this.link}}" target="_blank" class="card-link">
           <h4 class="card-title">{{this.title}}</h4>
         </a>
-        <button class="btn btn-block btn-warning my-2 my-sm-0 save" id="{{this._id}}" type="submit">Save</button>
+        <button class="btn btn-block btn-warning my-2 my-sm-0 save" id="{{this._id}}" type="submit" data-toggle="modal" data-target="#saveModal">Save</button>
       </div>
       </div>
     {{/each}}
 
+    
+<div class="modal" id="saveModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Success</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Your article has been saved.
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal" id="modalClose">Close</button>
+      </div>
+
     </div>
-    <div id="notes">
+  </div>
+</div>
+
+
     </div>
+   
   </div>
   

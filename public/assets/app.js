@@ -42,6 +42,21 @@ $(document).ready(function () {
         })
     })
 
+    $(".saveNote").on("click", function () {
+        var id = $(this).attr("id");
+        var newNote = $("#newNote").val().trim();
+        alert(id+": "+ newNote);
+
+        $.ajax({
+            url: '/articles/'+ id,
+            type: 'POST',
+            success: function (result) {
+                console.log("Note added.");
+            }
+        });
+    })
+
+    
     $("#delete").on("click", function () {
         $.ajax({
             url: '/clear',
