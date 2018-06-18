@@ -31,6 +31,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 
+
 //Routes
 var routes = require("./controllers/article.js");
 app.use(routes);
