@@ -57,11 +57,10 @@ $(".remove").on("click", function () {
                 article: articleId
               },
             success: function (result) {
-                console.log("Note added.");
-                
+                console.log("Note added.");               
             }
         });
-
+       
         $("#newNote").val("");
         var id = "";
         
@@ -81,12 +80,23 @@ $(".remove").on("click", function () {
             var notes=[];
                for (var i=0; i<result.length; i++){
                 
-                notes.push('<div class="row"><p>'+result[i].body+'</p></div>')
+                notes.push('<div class="row"><p>'+result[i].body+'</p><button class="btn btn-danger note-delete" data-dismiss="modal" id="'+result[i]._id + '">x</button></div>')
                }
                $("#noteContainer").append(notes);
             }
         });
 
+    });
+
+    $('#noteModal').on('click', '.note-delete', function () {
+        event.preventDefault();
+        noteId=$(this).attr("id");
+        $.ajax({
+            url: '/clearnote/' + noteId,
+            type: 'DELETE',
+            success: function (result) {
+                          }
+        });
     });
     
     $("#delete").on("click", function () {

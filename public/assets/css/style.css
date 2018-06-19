@@ -84,6 +84,15 @@ body {
     min-height: 100%;
   }
 
+  .note-delete {
+      height: 20px;
+      padding-top: 0px;
+      margin-top: 5px;
+      margin-left: 40px;
+  }
+
+ 
+
 @media (min-width: 34em) {
     .card-columns {
         -webkit-column-count: 2;

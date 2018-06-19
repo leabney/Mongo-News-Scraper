@@ -119,7 +119,7 @@ router.delete("/notes", function (req, res) {
 
 
 //Route to delete notes//
-router.get("/clearnote/:id", function (req, res) {
+router.delete("/clearnote/:id", function (req, res) {
   db.Note.remove({_id: req.params.id})
     .then(function (dbArticle) {
       //Send cleared message to client
