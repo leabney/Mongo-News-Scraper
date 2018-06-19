@@ -80,7 +80,7 @@ $(".remove").on("click", function () {
             var notes=[];
                for (var i=0; i<result.length; i++){
                 
-                notes.push('<div class="row"><p>'+result[i].body+'</p><button class="btn btn-danger note-delete" data-dismiss="modal" id="'+result[i]._id + '">x</button></div>')
+                notes.push('<div class="row"><div class="col-sm-10"><p>'+result[i].body+'</p></div><div class="col-sm-2"><button class="btn btn-danger note-delete" data-dismiss="modal" id="'+result[i]._id + '">x</button></div></div>')
                }
                $("#noteContainer").append(notes);
             }
